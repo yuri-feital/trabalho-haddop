@@ -1,0 +1,28 @@
+- Defina um tema: 
+
+Gastos Parlamentares
+
+- Identificação das fontes de onde os dados foram obtidos:
+
+Site https://brasil.io/dataset/eleicoes-brasil/candidatos/ -> Candidatos deputados
+
+
+Site https://brasil.io/dataset/gastos-deputados/cota_parlamentar/ -> Gastos dos deputados
+cota-parlamentar.csv -> 763MB
+(Por ser grande não consegui add no git)
+
+- Formulação de perguntas analíticas a serem respondidas com os dados:
+
+1- Quais foram os maiores gastos ao longo dos anos? (gastos x categoria)
+
+2- Conforme os anos foram passando, os gastos foram aumentando? (gasto x tempo)
+
+3- Há relação dos gastos com a região? (gasto x região)
+
+4- Comparação dos gastos entre candidatos de diferentes partidos. (gasto x partido)
+
+5- Há relação dos gastos dos partidos com o número de candidatos eleito de cada partido? (gasto x número de candidatos)
+
+- Dataset:
+ 
+

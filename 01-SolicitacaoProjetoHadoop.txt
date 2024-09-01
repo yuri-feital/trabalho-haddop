@@ -1,0 +1,34 @@
+Segue o que foi solicitado no proejto
+
+Defina um tema (evasão escolar, COVID, seu contexto profissional, análise de redes sociais, etc.) e elabore um relatório que demonstre uma análise de dados realizada sobre o tema 
+Passos fundamentais a serem documentados no trabalho:
+Visão geral do esquema de dados (caracterização das tabelas, dicionário de dados, etc.)
+Identificação das fontes de onde os dados foram obtidos
+Construção de um database no Hive que implemente o esquema proposto
+Formulação de perguntas analíticas a serem respondidas com os dados
+Consultas SQL que respondem às perguntas elaboradas
+Proposta de evolução do trabalho
+Entregáveis em um repositório público (preferencialmente Github, mas pasta no Google Drive também é aceito):
+Relatório
+Scripts de criação do database no Hive
+Scripts de ingestão de dados no Hive
+Scripts com as consultas SQL que foram utilizadas nas análises
+
+Requisitos mínimos:
+Pelo menos 2 tabelas no Hive
+Pelo menos 5 consultas SQL devem ser apresentadas para sustentar as análises apresentadas
+
+Fatores de bonificação:
+Volume de dados (quanto maior, melhor)
+Heterogeneidade de dados
+Quanto maior a variedade de formatos (estruturado e não estruturado), melhor
+Fontes de dados
+Quanto maior o número de fontes (IBGE, Kaggle, etc.), melhor
+Links úteis para a definição do tema:
+
+IBGE
+Kaggle (https://www.kaggle.com/)
+Portal de dados abertos (https://dados.gov.br/)
+Brasil.io (https://brasil.io/home/)
+Google datasets (https://datasetsearch.research.google.com/)
+Assim que terminar, salve o seu arquivo PDF e poste no Moodle. Utilize o seu nome para nomear o arquivo, identificando também a disciplina no seguinte formato: “nomedoaluno_nomedadisciplina_pd.PDF”.

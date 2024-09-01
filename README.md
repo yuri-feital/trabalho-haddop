@@ -2,25 +2,14 @@
 
 O passo a passo será explicado nesta sessão:
 
-cluster-7120
+01-SolicitacaoProjetoHadoop -> Identificação do que é necessário para o Trabalho
 
-Site https://brasil.io/dataset/eleicoes-brasil/candidatos/ -> Candidatos deputados
+02-PrimeirosPassos -> Definição do Tema, do database, quais análises serão feitas e o dataset
 
+03-CriacaoDatabaseHive-> Scripts feitos no ssh do cluster criado no Dataproc do google cloud, no cluster 5472, para criar o hive/database
 
-Site https://brasil.io/dataset/gastos-deputados/cota_parlamentar/ -> Gastos dos deputados
-cota-parlamentar.csv -> 763MB
-(Por ser grande não consegui add no git)
+04-IngestaoDadosHive-> Scripts feitos no ssh do cluster criado no Dataproc do google cloud, no cluster 5472, para popular o database
 
-Serão feitas as seguintes análises:
+05-ScriptsSQL -> Sripts SQL para realizar as análises definidas no tópico 2 (02-PrimeirosPassos) e suas conclusões
 
-1- Quais foram os maiores gastos ao longo dos anos? (gastos x categoria)
-
-2- Conforme os anos foram passando, os gastos foram aumentando? (gasto x tempo)
-
-3- Há relação dos gastos com a região? (gasto x região)
-
-4- Comparação dos gastos entre candidatos de diferentes partidos. (gasto x partido)
-
-5- Há relação dos gastos dos partidos com o número de candidatos eleito de cada partido? (gasto x número de candidatos)
-
-
+06-PropostaEvolucao -> Proposta de evolução para o trabalho
