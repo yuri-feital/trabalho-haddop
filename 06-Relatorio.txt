@@ -149,5 +149,20 @@ Excluindo os sem estados, Roraima foi o que menos recebeu.
 
 5- Quais os nomes que mais se repetem que receberam auxilio? (Qtd nome)
 
++-----------------------------+-----------+
+|        primeiro_nome        | qtd_nome  |
++-----------------------------+-----------+
+| MARIA JOSE DA SILVA         | 100491    |
+| MARIA APARECIDA DA SILVA    | 82937     |
+| MARIA DE FATIMA DA SILVA    | 40953     |
+| JOSE CARLOS DA SILVA        | 40647     |
+| MARIA JOSE DOS SANTOS       | 39836     |
+| MARIA APARECIDA DOS SANTOS  | 38596     |
+| ANA PAULA DA SILVA          | 33210     |
+| MARIA DE LOURDES DA SILVA   | 30200     |
+| JOSE CARLOS DOS SANTOS      | 25949     |
+| JOAO BATISTA DA SILVA       | 25671     |
++-----------------------------+-----------+
 
+Correspondendo a pesquisa de nomes e sobrenomes mais comuns do brasil.
 
