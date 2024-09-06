@@ -27,10 +27,10 @@
 >gcsfuse arquivo-projeto-hadoop arquivos-curso
 
 ######Formatação dos arquivos csv 
-##Remocao das aspas
->sed 's/"//g' /home/yurigafeital/arquivos-curso/datasets/POP2022_Municipios_20230622.csv > /home/yurigafeital/arquivos-curso/datasets/municipio_clean.csv
-##Remocao do ponto
->sed 's/.//g' /home/yurigafeital/arquivos-curso/datasets/municipio_clean.csv > /home/yurigafeital/arquivos-curso/datasets/municipio_clean_v2.csv
+##Remocao do head do arquivo csv
+>tail -n +2 /home/yurigafeital/arquivos-curso/datasets/POP2022_Municipios_20230622.csv > /home/yurigafeital/arquivos-curso/datasets/municipio_no_header.csv
+>tail -n +2 /home/yurigafeital/arquivos-curso/datasets/auxilio_emergencial.csv > /home/yurigafeital/arquivos-curso/datasets/auxilio_emergencial_no_header.csv
+
 8- Utilização do beeline 
 
 >beeline -u jdbc:hive2://localhost:10000/default -n yurigafeital@cluster-5472-m -d org.apache.hive.jdbc.HiveDriver;
@@ -54,7 +54,7 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE;
 
 ###Criacao da tabela municipios
->CREATE TABLE municipio (uf STRING, cod_uf INT,cod_municipio STRING, municipio STRING, qtd_populacao INT)
+>CREATE TABLE municipio (uf STRING, cod_uf INT,cod_municipio STRING, municipio STRING, qtd_populacao FLOAT)
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';' 
 STORED AS TEXTFILE;

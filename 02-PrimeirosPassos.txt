@@ -38,3 +38,37 @@ Foi realizado o comando describe após a inserção dos dados
 | municipio      | string     |          |
 | qtd_populacao  | float      |          |
 +----------------+------------+----------+
+
+Sendo:
+uf - Sigla do estado
+cod_uf - Codigo do estado 
+cod_municipio - Codigo do municipio 
+municipio - Nome da cidade / municipio 
+qtd_populacao - Quantidade de pessoas morando no municipio
+
+
+###Tabela  Auxilio Emergencial
++----------------+------------+----------+
+|    col_name    | data_type  | comment  |
++----------------+------------+----------+
+| uf             | string     |          |
+| cod_uf         | int        |          |
+| cod_municipio  | string     |          |
+| municipio      | string     |          |
+| qtd_populacao  | float      |          |
++----------------+------------+----------+
+
+Sendo:
+ano_mes - Ano / mes referente ao auxlio recebido 
+uf - Sigla do estado
+codigo_ibge_municipio - Codigo do municipio segundo IBGE
+municipio - Nome da cidade / municipio
+nis - numero de identificacao social
+cpf - cpf 
+beneficiario - nome
+nis_responsavel - numero de identificacao social do responsavel
+cpf_responsavel - cpf do responsavel
+responsavel - nome do responsavel
+enquadramento - Motivo do auxilio
+parcela - Quantidade de parcelas recebidas
+valor - Valor da parcela
