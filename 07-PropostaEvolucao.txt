@@ -1,0 +1,15 @@
+#### Proposta de evolução
+
+1. Enriquecimento dos Dados
+-Dados de Renda Familiar
+
+-Dados Demográficos e Socioeconômicos
+
+2. Limpeza e Preparação dos Dados
+-Tratar os dados nulos ou faltantes.
+
+3. Visualização e Relatórios
+-Dashboards Interativos
+
+4. Integração de Dados Externos
+-Ao invés de exportar os arquivos csv, eu poderia ter uma conexão com um banco de dados externo ou uma API.

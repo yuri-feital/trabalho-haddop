@@ -14,13 +14,13 @@ POP2022_Municipios_20230622 -> 186 KB
 
 - Formulação de perguntas analíticas a serem respondidas com os dados:
 
-1- Qual é o total de auxílio emergencial distribuído em cada município? (Valor total x Municipio)
+1- Qual é o total de auxílio emergencial distribuído em cada uf? (Valor total x Uf)
 
-2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada município? (Poulacao beneficiada/Total poupulacao x Municipio)
+2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada uf? (Poulacao beneficiada/Total poupulacao x Uf)
 
-3- Valor médio do auxilio por pessoa em cada município? (Valor total/Total poupulacao x Municipio)
+3- Valor médio do auxilio por pessoa em cada uf? (Valor total/Total poupulacao x Uf)
 
-4- Quantidade de vezes recebido o auxilio por municpio? (Parcela x municipio)
+4- Quantidade de vezes recebido o auxilio por uf? (Parcela x uf)
 
 5- Quais os nomes que mais se repetem que receberam auxilio? (Qtd nome)
 
@@ -48,15 +48,24 @@ qtd_populacao - Quantidade de pessoas morando no municipio
 
 
 ###Tabela  Auxilio Emergencial
-+----------------+------------+----------+
-|    col_name    | data_type  | comment  |
-+----------------+------------+----------+
-| uf             | string     |          |
-| cod_uf         | int        |          |
-| cod_municipio  | string     |          |
-| municipio      | string     |          |
-| qtd_populacao  | float      |          |
-+----------------+------------+----------+
++------------------------+------------+----------+
+|        col_name        | data_type  | comment  |
++------------------------+------------+----------+
+| ano_mes                | int        |          |
+| uf                     | string     |          |
+| codigo_ibge_municipio  | string     |          |
+| municipio              | string     |          |
+| nis                    | string     |          |
+| cpf                    | string     |          |
+| beneficiario           | string     |          |
+| nis_responsavel        | string     |          |
+| cpf_responsavel        | string     |          |
+| responsavel            | string     |          |
+| enquadramento          | string     |          |
+| parcela                | int        |          |
+| observacao             | string     |          |
+| valor                  | float      |          |
++------------------------+------------+----------+
 
 Sendo:
 ano_mes - Ano / mes referente ao auxlio recebido 
@@ -71,4 +80,5 @@ cpf_responsavel - cpf do responsavel
 responsavel - nome do responsavel
 enquadramento - Motivo do auxilio
 parcela - Quantidade de parcelas recebidas
+observacao - observacao
 valor - Valor da parcela

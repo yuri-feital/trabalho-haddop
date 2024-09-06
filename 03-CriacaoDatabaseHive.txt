@@ -48,7 +48,7 @@
 10- Criação das tabelas
 
 ###Criacao da tabela auxilio
->CREATE TABLE auxilio_emergencial (ano_mes INT, uf STRING,codigo_ibge_municipio STRING, municipio STRING, nis STRING, cpf STRING, beneficiario STRING, nis_responsavel STRING,cpf_responsavel STRING, responsavel STRING, enquadramento STRING, parcela INT, valor FLOAT) 
+>CREATE TABLE auxilio_emergencial (ano_mes INT, uf STRING,codigo_ibge_municipio STRING, municipio STRING, nis STRING, cpf STRING, beneficiario STRING, nis_responsavel STRING,cpf_responsavel STRING, responsavel STRING, enquadramento STRING, parcela INT, observacao STRING, valor FLOAT) 
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ',' 
 STORED AS TEXTFILE;
