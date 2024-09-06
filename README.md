@@ -12,7 +12,7 @@ O passo a passo será explicado nesta sessão:
 
 05-ScriptsSQL -> Sripts SQL para realizar as análises definidas no tópico 2 (02-PrimeirosPassos) e suas conclusões
 
-06-PropostaEvolucao -> Proposta de evolução para o trabalho
+06-Relatorio -> Resultado do ScriptSQL
 
-Vale ressaltar que o resultado das análises que se encontram aqui são:
+07-PropostaEvolucao -> Proposta de evolução para o trabalho
 

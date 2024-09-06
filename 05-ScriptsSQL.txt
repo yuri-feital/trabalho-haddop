@@ -8,40 +8,6 @@ FROM
 GROUP BY 
     uf;
 
-### RETORNO
-+-----+----------------+
-| uf  | total_auxilio  |
-+-----+----------------+
-| MA  | 8.2498932E9    |
-| AC  | 9.316482E8     |
-| SP  | 3.1680576E10   |
-| RN  | 3.678657E9     |
-|     | 247800.0       |
-| DF  | 1.9446858E9    |
-| SC  | 3.926445E9     |
-| RS  | 6.877362E9     |
-| PI  | 3.9194124E9    |
-| PE  | 1.07698908E10  |
-| PB  | 4.5076518E9    |
-| AM  | 4.4732892E9    |
-| RO  | 1.5636414E9    |
-| MG  | 1.6283049E10   |
-| GO  | 5.8288482E9    |
-| AP  | 9.52971E8      |
-| SE  | 2.5983708E9    |
-| RR  | 6.479202E8     |
-| BA  | 1.70635566E10  |
-| CE  | 1.02217854E10  |
-| MS  | 2.2079406E9    |
-| MT  | 2.9414358E9    |
-| TO  | 1.4666646E9    |
-| ES  | 3.2871432E9    |
-| AL  | 3.7236192E9    |
-| RJ  | 1.48293744E10  |
-| PA  | 9.8359806E9    |
-| PR  | 7.898199E9     |
-+-----+----------------+
-
 2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada uf? (Poulacao beneficiada/Total poupulacao x UF)
 
 SELECT 
@@ -55,8 +21,6 @@ ON
      a.uf = m.uf
 GROUP BY 
     a.uf, m.qtd_populacao;
-
-### RETORNO
 
 
 3- Valor médio do auxilio por pessoa em cada uf? (Valor total/Total poupulacao x Uf)
@@ -73,9 +37,6 @@ ON
 GROUP BY 
     a.uf, m.qtd_populacao;
 
-### RETORNO
-
-
 4- Quantidade de vezes recebido o auxilio por uf? (Parcela x Uf)
 
 SELECT 
@@ -86,20 +47,16 @@ FROM
 GROUP BY 
     uf;
 
-### RETORNO
-
-
 5- Quais os nomes que mais se repetem que receberam auxilio? (Qtd nome)
 
 SELECT 
-    beneficiario,
+    split(beneficiario, ' ')[0] AS primeiro_nome,
     COUNT(*) AS qtd_nome
 FROM 
     auxilio_emergencial
 GROUP BY 
-    beneficiario
+    split(beneficiario, ' ')[0]
 ORDER BY 
-    qtd_nome DESC;
-
-### RETORNO
+    qtd_nome DESC
+LIMIT 10;
 
