@@ -36,14 +36,76 @@ O estado de São Paulo foi o que ganhou maior valor do auxilio.
 Excluindo os sem estados, Roraima foi o que menos recebeu.
 
 
-2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada uf? (Poulacao beneficiada/Total poupulacao x UF)
+2- Qual a total de população por UF? (UF x Qtd pessoa)
 
++-----+---------------------+
+| UF  | Total População     |
++-----+---------------------+
+| SP  | 64,294.72           |
+| MG  | 38,350.29           |
+| RJ  | 19,979.35           |
+| PR  | 19,927.18           |
+| RS  | 19,367.59           |
+| SC  | 15,524.31           |
+| PE  | 15,113.05           |
+| PA  | 14,151.25           |
+| BA  | 24,096.07           |
+| GO  | 12,925.13           |
+| MA  | 11,478.46           |
+| MT  | 9,562.48            |
+| PB  | 8,061.92            |
+| ES  | 7,950.20            |
+| PI  | 6,540.35            |
+| AL  | 6,250.51            |
+| MS  | 5,667.48            |
+| AM  | 3,795.06            |
+| RO  | 3,232.76            |
+| SE  | 4,423.74            |
+| AP  | 1,548.54            |
+| RR  | 1,269.61            |
+| AC  | 1,659.56            |
+| TO  | 3,168.61            |
+| DF  | Não Disponível      |
++-----+---------------------+
 
+O estado de São Paulo é o que possui a maior população, enquanto que Rorainma é menor.
 
 
 3- Valor médio do auxilio por pessoa em cada uf? (Valor total/Total poupulacao x Uf)
 
++----+----------------------------------------+ 
+| UF | Valor Médio do Auxílio por Pessoa (R$) |
++----+----------------------------------------+ 
+| SP | 490.16                                 | 
+| BA | 708.10                                 | 
+| MG | 424.71                                 | 
+| RJ | 742.16                                 | 
+| PE | 713.62                                 | 
+| CE | 642.16                                 | 
+| PA | 693.25                                 | 
+| PR | 396.93                                 | 
+| RS | 355.82                                 | 
+| GO | 451.35                                 | 
+| PB | 559.68                                 | 
+| AM | 1,179.21                               | 
+| SC | 252.41                                 | 
+| PI | 599.16                                 | 
+| AL | 595.63                                 | 
+| RN | 995.65                                 | 
+| ES | 413.82                                 | 
+| MS | 389.92                                 | 
+| MT | 307.63                                 | 
+| DF | Não Disponível                         | 
+| TO | 462.00                                 | 
+| RO | 483.51                                 | 
+| AP | 615.33                                 | 
+| AC | 561.62                                 | 
+| RR | 510.00                                 | 
+|    | 1.00                                   | 
++----+----------------------------------------+
 
+Vemos que por mais que São Paulo tenha recebido o maior valor de auxilio, comparando com a população, ele ficou com uma média não significativa.
+Sendo o meio maior o Amapa, que teve sua população mais contemplada.
 
 
 4- Quantidade de vezes recebido o auxilio por uf? (Parcela x Uf)

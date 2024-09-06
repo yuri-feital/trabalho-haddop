@@ -8,19 +8,15 @@ FROM
 GROUP BY 
     uf;
 
-2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada uf? (Poulacao beneficiada/Total poupulacao x UF)
+2- Qual a total de população por UF? (UF x Qtd pessoa)
 
 SELECT 
-    a.uf,
-    (SUM(a.valor) / m.qtd_populacao) * 100 AS percentual_auxilio
+    uf,
+    SUM(qtd_populacao) AS total_pessoa
 FROM 
-    auxilio_emergencial a
-JOIN 
-    municipio m
-ON 
-     a.uf = m.uf
+    municipio
 GROUP BY 
-    a.uf, m.qtd_populacao;
+    uf;
 
 
 3- Valor médio do auxilio por pessoa em cada uf? (Valor total/Total poupulacao x Uf)
@@ -50,12 +46,12 @@ GROUP BY
 5- Quais os nomes que mais se repetem que receberam auxilio? (Qtd nome)
 
 SELECT 
-    split(beneficiario, ' ')[0] AS primeiro_nome,
+    beneficiario AS primeiro_nome,
     COUNT(*) AS qtd_nome
 FROM 
     auxilio_emergencial
 GROUP BY 
-    split(beneficiario, ' ')[0]
+    beneficiario
 ORDER BY 
     qtd_nome DESC
 LIMIT 10;
