@@ -1,28 +1,40 @@
 - Defina um tema: 
 
-Gastos Parlamentares
+Auxilio emergencial
 
 - Identificação das fontes de onde os dados foram obtidos:
 
-Site https://brasil.io/dataset/eleicoes-brasil/candidatos/ -> Candidatos deputados
-
-
-Site https://brasil.io/dataset/gastos-deputados/cota_parlamentar/ -> Gastos dos deputados
-cota-parlamentar.csv -> 763MB
+Site https://brasil.io/dataset/govbr/files/  -> Auxilio Emergencial
+auxilio_emergencial.csv -> 29,3 GB
 (Por ser grande não consegui add no git)
+
+
+Site https://www.ibge.gov.br/estatisticas/sociais/trabalho/22827-censo-demografico-2022.html?edicao=35938-> População dos municipios
+POP2022_Municipios_20230622 -> 186 KB
 
 - Formulação de perguntas analíticas a serem respondidas com os dados:
 
-1- Quais foram os maiores gastos ao longo dos anos? (gastos x categoria)
+1- Qual é o total de auxílio emergencial distribuído em cada município? (Valor total x Municipio)
 
-2- Conforme os anos foram passando, os gastos foram aumentando? (gasto x tempo)
+2- Qual é a porcentagem do auxílio emergencial recebido em relação à população de cada município? (Poulacao beneficiada/Total poupulacao x Municipio)
 
-3- Há relação dos gastos com a região? (gasto x região)
+3- Valor médio do auxilio por pessoa em cada município? (Valor total/Total poupulacao x Municipio)
 
-4- Comparação dos gastos entre candidatos de diferentes partidos. (gasto x partido)
+4- Quantidade de vezes recebido o auxilio por municpio? (Parcela x municipio)
 
-5- Há relação dos gastos dos partidos com o número de candidatos eleito de cada partido? (gasto x número de candidatos)
+5- Quais os nomes que mais se repetem que receberam auxilio? (Qtd nome)
 
 - Dataset:
 
 Foi realizado o comando describe após a inserção dos dados 
+
+###Tabela  Municipio
++----------------+------------+----------+
+|    col_name    | data_type  | comment  |
++----------------+------------+----------+
+| uf             | string     |          |
+| cod_uf         | int        |          |
+| cod_municipio  | string     |          |
+| municipio      | string     |          |
+| qtd_populacao  | float      |          |
++----------------+------------+----------+

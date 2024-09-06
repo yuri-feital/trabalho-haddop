@@ -1,0 +1,63 @@
+####Criacao Database Hive######
+
+1- Foi acessado o google cloud (https://cloud.google.com/)
+
+2- Utilizei o Dataproc para criar o cluster "cluster-5472-m"
+
+3- Utilizei o Cloud storage para criar um bucket com o nome "arquivo-projeto-hadoop"
+
+4- Dentro do bucket criei uma pasta chamada "datasets/"
+
+5- Alimentei o bucket com os csv indicados no "02-PrimeirosPassos"
+
+6- Acessei o SSH do cluster
+
+7- Com o SSH aberto inseri os seguintes comandos para a VM ter acesso ao bucket:
+
+############## Instalação do GCSFUSE #######################
+>export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
+>echo "deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main" | sudo tee /etc/apt/sources.list.d/gcsfuse.list
+>curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+>sudo apt-get update
+>sudo apt-get install gcsfuse
+
+
+############## Montagem do bucket no sistema de arquivos da VM #######################
+>mkdir arquivos-curso
+>gcsfuse arquivo-projeto-hadoop arquivos-curso
+
+######Formatação dos arquivos csv 
+##Remocao das aspas
+>sed 's/"//g' /home/yurigafeital/arquivos-curso/datasets/POP2022_Municipios_20230622.csv > /home/yurigafeital/arquivos-curso/datasets/municipio_clean.csv
+##Remocao do ponto
+>sed 's/.//g' /home/yurigafeital/arquivos-curso/datasets/municipio_clean.csv > /home/yurigafeital/arquivos-curso/datasets/municipio_clean_v2.csv
+8- Utilização do beeline 
+
+>beeline -u jdbc:hive2://localhost:10000/default -n yurigafeital@cluster-5472-m -d org.apache.hive.jdbc.HiveDriver;
+
+9- Com o beeline funcionando, criei o database "projeto"
+
+>create database if not exists projeto;
+
+##Para verificar a criação do database
+>show databases;
+
+##Para usar o database criado
+>use projeto;
+
+10- Criação das tabelas
+
+###Criacao da tabela auxilio
+>CREATE TABLE auxilio_emergencial (ano_mes INT, uf STRING,codigo_ibge_municipio STRING, municipio STRING, nis STRING, cpf STRING, beneficiario STRING, nis_responsavel STRING,cpf_responsavel STRING, responsavel STRING, enquadramento STRING, parcela INT, valor FLOAT) 
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE;
+
+###Criacao da tabela municipios
+>CREATE TABLE municipio (uf STRING, cod_uf INT,cod_municipio STRING, municipio STRING, qtd_populacao INT)
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ';' 
+STORED AS TEXTFILE;
+
+##Para verificar a criação das tabelas 
+>show tables;
